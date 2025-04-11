@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter App</title>
+
+  <style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
+
+  <!-- Link JS  -->
+  <script src="./index.js" defer></script>
+
+  <!-- Link Tailwind CSS  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+  <!-- Wrapper -->
+  <div class="w-screen h-screen bg-gradient-to-r from-gray-800 to-gray-900 flex justify-center items-center">
+
+    <div class="flex flex-col gap-6 p-6 bg-gray-100 shadow-2xl rounded-xl max-w-md w-full">
+
+      <h1 class="text-2xl font-bold bg-amber-300 text-gray-800 p-4 rounded-lg text-center shadow-md">
+        Increment & Decrement
+      </h1>
+
+      <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md text-3xl text-gray-700 font-bold">
+        <button id="dec" class="px-4 py-2 border-r-2 border-gray-300 hover:text-red-500 transition duration-300">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <p id="counter">0</p>
+        <button id="inc" class="px-4 py-2 border-l-2 border-gray-300 hover:text-green-500 transition duration-300">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+
+      <!-- Custom Increment & Decrement -->
+      <div class="flex flex-col gap-3">
+        <div class="flex">
+          <input type="number" placeholder="Increment by Value"
+            class="w-2/3 p-3 rounded-l-lg border-none text-center text-lg focus:ring-2 focus:ring-blue-500 outline-none" />
+          <button onclick="rangeIncrement()"
+            class="w-1/3 bg-blue-500 text-white font-semibold rounded-r-lg p-3 hover:bg-blue-600 transition duration-300">
+            Update
+          </button>
+        </div>
+
+        <div class="flex">
+          <input type="number" placeholder="Decrement by Value"
+            class="w-2/3 p-3 rounded-l-lg border-none text-center text-lg focus:ring-2 focus:ring-red-500 outline-none" />
+          <button onclick="rangeDecrement()"
+            class="w-1/3 bg-red-500 text-white font-semibold rounded-r-lg p-3 hover:bg-red-600 transition duration-300">
+            Update
+          </button>
+        </div>
+      </div>
+
+      <!-- Clear Button -->
+      <button id="clr"
+        class="bg-orange-500 text-white font-bold text-lg p-3 rounded-lg hover:bg-orange-600 transition duration-300">
+        Clear
+      </button>
+
+    </div>
+  </div>
+
+  
+
+  <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
