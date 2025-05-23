@@ -232,7 +232,7 @@ h1 {
     background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
     background-repeat: no-repeat;
     outline: none;
-    z-index:-1;
+    z-index: -1;
 }
 
 /* seudo content - webkit - style thumb */
