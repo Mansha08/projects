@@ -59,7 +59,8 @@ const SignupForm = ({setIsLoggedIn}) => {
         className={`${accountType === "instructor"
         ?
         "bg-slate-900 text-slate-50"
-        :"bg-transparent text-slate-400"} py-2 px-5 rounded-full transition-all duration-200`}
+        :"bg-transparent text-slate-400"} py-2 px-5 rounded-full 
+        transition-all duration-200`}
         onClick={() => setAccountType("instructor")}>
         Instructor</button>
       </div>
@@ -111,7 +112,8 @@ const SignupForm = ({setIsLoggedIn}) => {
             onChange={changeHandler}
             placeholder="Enter Email Address"
             value={formData.email}
-            className="bg-slate-800 rounded-[0.5rem] text-slate-50 w-full p-[12px] border-b-2"
+            className="bg-slate-800 rounded-[0.5rem] text-slate-50
+             w-full p-[12px] border-b-2"
           />
         </label>
         </div>
@@ -156,12 +158,14 @@ const SignupForm = ({setIsLoggedIn}) => {
             <span
             className="absolute right-3 top-[37px] cursor-pointer"
              onClick={() => setShowConfirmPassword((prev) => !prev)}>
-              {showConfirmPassword ? (<AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />) : (<AiOutlineEye fontSize={24} fill="#AFB2BF"  />)}
+              {showConfirmPassword ? (<AiOutlineEyeInvisible fontSize={24}
+               fill="#AFB2BF" />) : (<AiOutlineEye fontSize={24} fill="#AFB2BF"  />)}
             </span>
           </label>
         </div>
 
-        <button className="w-full bg-yellow-400 rounded-[8px] font-medium text-slate-900 px-[12px] py-[8px] mt-6">Create Account</button>
+        <button className="w-full bg-yellow-400 rounded-[8px] font-medium
+         text-slate-900 px-[12px] py-[8px] mt-6">Create Account</button>
       </form>
     </div>
   );

@@ -9,7 +9,8 @@ let setIsLoggedIn = props.setIsLoggedIn;
 
 
   return (
-    <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
+    <div className="flex justify-between items-center w-11/12 
+    max-w-[1160px] py-4 mx-auto">
       <Link to="/">
         <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
       </Link>
@@ -35,14 +36,16 @@ let setIsLoggedIn = props.setIsLoggedIn;
       <div className="flex items-center gap-x-4">
         {!isLoggedIn &&
           <Link to="/login">
-            <button className="bg-slate-800 text-slate-200 py-[8px] px-[12px] rounded-[8px] border-slate-700">Login</button>
+            <button className="bg-slate-800 text-slate-200 py-[8px] 
+            px-[12px] rounded-[8px] border-slate-700">Login</button>
           </Link>
         }
           
 
         {!isLoggedIn &&
           <Link to="/signup">
-            <button className="bg-slate-800 text-slate-200 py-[8px] px-[12px] rounded-[8px] border-slate-700">
+            <button className="bg-slate-800 text-slate-200 py-[8px] 
+            px-[12px] rounded-[8px] border-slate-700">
             Signup
             </button>
           </Link>
@@ -52,7 +55,8 @@ let setIsLoggedIn = props.setIsLoggedIn;
         {isLoggedIn &&
           <Link to="/">
             <button
-            className="bg-slate-800 text-slate-200 py-[8px] px-[12px] rounded-[8px] border-slate-700" 
+            className="bg-slate-800 text-slate-200 py-[8px] px-[12px]
+             rounded-[8px] border-slate-700" 
             onClick={() => {
                 setIsLoggedIn(false);
                 toast.success("Logged Out");
@@ -63,7 +67,8 @@ let setIsLoggedIn = props.setIsLoggedIn;
 
         {isLoggedIn &&
           <Link to="/dashboard">
-            <button className="bg-slate-800 text-slate-200 py-[8px] px-[12px] rounded-[8px] border-slate-700">Dashboard</button>
+            <button className="bg-slate-800 text-slate-200 py-[8px] 
+            px-[12px] rounded-[8px] border-slate-700">Dashboard</button>
           </Link>
         }
           
